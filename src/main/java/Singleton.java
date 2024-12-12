@@ -1,0 +1,23 @@
+import com.sun.jdi.request.InvalidRequestStateException;
+
+public class Singleton {
+    private volatile static Singleton instance;
+
+    private Singleton() {
+        if (instance != null){
+            throw new InvalidRequestStateException();
+        }
+    }
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            synchronized(Singleton.class){
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+
+}
