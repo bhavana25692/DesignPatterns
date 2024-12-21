@@ -1,8 +1,3 @@
-import abstactFactory.FactoryProvider;
-import factory.Shape;
-import factory.ShapeFactory;
-import prototype.PrototypeShape;
-
 public class Main {
     public static void main(String[] args) {
 //        Singleton singleton1 = Singleton.getInstance();
@@ -21,5 +16,7 @@ public class Main {
 //        shape2.setSides(3);
 //        System.out.println(shape1.toString());
 //        System.out.println(shape2.toString());
+
+//        Computer computer = new Computer.Builder().setRam(256).setBrand("Intel").build();
     }
 }
